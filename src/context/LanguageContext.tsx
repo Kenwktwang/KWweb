@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 
-type Language = 'en' | 'zh';
+type Language = 'en' | 'zh' | 'cn';
 
 interface LanguageContextType {
   language: Language;
@@ -117,9 +117,9 @@ const translations = {
     'pricing.title': 'Simple,',
     'pricing.titleHighlight': 'Transparent',
     'pricing.title2': 'Pricing',
-    'pricing.subtitle': 'Choose based on your portfolio size. Professional and Enterprise plans include a 30-minute portfolio walkthrough.',
+    'pricing.subtitle': 'Choose based on your portfolio size. Professional and Enterprise plans include an initial consultation.',
     'pricing.oneTimeFee': 'One-time fee',
-    'pricing.included': '+ 30-min Portfolio Walkthrough',
+    'pricing.included': '+ Initial Consultation',
     'pricing.bottomNote': 'All plans include secure data handling and professional analysis by FRM-certified experts.',
     
     // Plans
@@ -144,7 +144,7 @@ const translations = {
     'plan.feature.cvar': 'CVaR Tail Risk Assessment',
     'plan.feature.metrics': 'Portfolio Risk Metrics',
     'plan.feature.pdf': 'Professional PDF Report',
-    'plan.feature.walkthrough': '30-min Portfolio Walkthrough',
+    'plan.feature.walkthrough': 'Initial Consultation',
     'plan.feature.stress': 'Stress Testing Report',
     'plan.feature.tips': 'Risk Improvement Tips',
     'plan.feature.advanced': 'Advanced Stress Testing',
@@ -155,18 +155,18 @@ const translations = {
     // CTA
     'cta.ready': 'Ready to Know Your',
     'cta.realRisk': 'Real Risk?',
-    'cta.subtitle': 'Scan the QR code to contact us for your free portfolio risk analysis. Includes a 30-minute portfolio walkthrough.',
+    'cta.subtitle': 'Scan the QR code to contact us for your free portfolio risk analysis. Includes an initial consultation.',
     'cta.emailPlaceholder': 'Enter your email',
     'cta.getFreeAnalysis': 'Get Free Analysis',
     'cta.takes2Min': 'Quick Response',
     'cta.noSpam': 'No spam, ever',
-    'cta.walkthrough': '+ 30-min Walkthrough',
+    'cta.walkthrough': '+ Initial Consultation',
     'cta.scanWechat': 'Scan to add on WeChat',
     'cta.scanWhatsapp': 'Scan to chat on WhatsApp',
     
     // Success Dialog
     'success.title': 'You\'re on the List!',
-    'success.desc': 'Thank you for your interest. We\'ve received your email and will contact you at kenktwang@gmail.com within 24 hours to schedule your free portfolio analysis and 30-minute walkthrough.',
+    'success.desc': 'Thank you for your interest. We\'ve received your email and will contact you at kenktwang@gmail.com within 24 hours to schedule your free portfolio analysis and initial consultation.',
     'success.gotIt': 'Got it!',
     
     // Footer
@@ -288,9 +288,9 @@ const translations = {
     'pricing.title': '簡單、',
     'pricing.titleHighlight': '透明',
     'pricing.title2': '的價格',
-    'pricing.subtitle': '根據您的投資組合規模選擇。專業版和企業版包含 30 分鐘投資組合講解。',
+    'pricing.subtitle': '根據您的投資組合規模選擇。專業版和企業版包含初步諮詢。',
     'pricing.oneTimeFee': '一次性費用',
-    'pricing.included': '+ 30 分鐘投資組合講解',
+    'pricing.included': '+ 初步諮詢',
     'pricing.bottomNote': '所有方案都包括安全數據處理和 FRM 認證專家的專業分析。',
     
     // Plans
@@ -315,7 +315,7 @@ const translations = {
     'plan.feature.cvar': 'CVaR 尾部風險評估',
     'plan.feature.metrics': '投資組合風險指標',
     'plan.feature.pdf': '專業 PDF 報告',
-    'plan.feature.walkthrough': '30 分鐘投資組合講解',
+    'plan.feature.walkthrough': '初步諮詢',
     'plan.feature.stress': '壓力測試報告',
     'plan.feature.tips': '風險改善建議',
     'plan.feature.advanced': '高級壓力測試',
@@ -326,18 +326,18 @@ const translations = {
     // CTA
     'cta.ready': '準備好了解您的',
     'cta.realRisk': '真實風險了嗎？',
-    'cta.subtitle': '掃描 QR code 聯繫我們，獲取免費的投資組合風險分析。包括 30 分鐘投資組合講解。',
+    'cta.subtitle': '掃描 QR code 聯繫我們，獲取免費的投資組合風險分析。包括初步諮詢。',
     'cta.emailPlaceholder': '輸入您的電郵',
     'cta.getFreeAnalysis': '獲取免費分析',
     'cta.takes2Min': '快速回覆',
     'cta.noSpam': '絕無垃圾郵件',
-    'cta.walkthrough': '+ 30 分鐘講解',
+    'cta.walkthrough': '+ 初步諮詢',
     'cta.scanWechat': '掃描添加微信',
     'cta.scanWhatsapp': '掃描 WhatsApp 對話',
     
     // Success Dialog
     'success.title': '您已加入名單！',
-    'success.desc': '感謝您的關注。我們已收到您的電郵，將在 24 小時內通過 kenktwang@gmail.com 與您聯繫，安排免費投資組合分析和 30 分鐘講解。',
+    'success.desc': '感謝您的關注。我們已收到您的電郵，將在 24 小時內通過 kenktwang@gmail.com 與您聯繫，安排免費投資組合分析和初步諮詢。',
     'success.gotIt': '知道了！',
     
     // Footer
@@ -351,12 +351,184 @@ const translations = {
     'footer.privacy': '隱私政策',
     'footer.terms': '服務條款',
   },
+  cn: {
+    // Navigation
+    'nav.services': '服务',
+    'nav.howItWorks': '运作方式',
+    'nav.sampleReport': '样本报告',
+    'nav.pricing': '价格',
+    'nav.getFreeAnalysis': '免费分析',
+    
+    // Hero
+    'hero.trustedBy': '受超过 2,000 名投资者信赖',
+    'hero.headline1': '了解您的风险',
+    'hero.headline2': '在它了解您之前',
+    'hero.subheadline': '为散户投资者提供专业的 VaR 分析。停止猜测，开始使用机构级工具衡量您的投资组合风险。',
+    'hero.ctaPrimary': '获取免费风险分析',
+    'hero.ctaSecondary': '了解运作方式',
+    'hero.confidence': '置信度',
+    'hero.users': '用户',
+    'hero.certified': '认证',
+    'hero.scrollToExplore': '向下滚动探索',
+    
+    // Problem Section
+    'problem.theProblem': '问题所在',
+    'problem.title1': '为什么',
+    'problem.title2': '90%',
+    'problem.title3': '的散户投资者会亏钱',
+    'problem.subtitle': '摧毁您投资组合的 5 个关键错误 — 以及如何避免它们',
+    'problem.soundFamiliar': '听起来很熟悉？您并不孤单。',
+    'problem.discoverSolution': '发现解决方案',
+    
+    // Mistakes
+    'mistake.1.title': '只看回报，忽视风险',
+    'mistake.1.desc': '追逐高回报而不了解风险敞口。看起来有利可图的东西可能会让您血本无归。',
+    'mistake.2.title': '过度集中 = 全盘皆输',
+    'mistake.2.desc': '把太多资金放在一只股票或一个行业。当它下跌时，一切都会跟着下跌。',
+    'mistake.3.title': '没有止损：小亏变大亏',
+    'mistake.3.desc': '希望不是策略。没有止损，5% 的亏损在您反应之前会变成 50%。',
+    'mistake.4.title': '情绪交易，没有纪律',
+    'mistake.4.desc': '因 FOMO 而买入，因恐慌而卖出。情绪是回报的敌人。',
+    'mistake.5.title': '甚至不知道自己的风险水平',
+    'mistake.5.desc': '如果您无法衡量风险，就无法管理风险。大多数投资者都不知道自己面临什么风险。',
+    
+    // Solution Section
+    'solution.theSolution': '解决方案',
+    'solution.whatIsVaR': '什么是 VaR？',
+    'solution.subtitle': '风险价值：专业人士使用的指标',
+    'solution.desc1': 'VaR（风险价值）告诉您在给定置信水平下，特定时间内投资组合可能损失的最大金额。',
+    'solution.desc2': '例如：如果您的每日 VaR 为',
+    'solution.desc3': '置信度为',
+    'solution.desc4': '，这意味着有 95% 的概率您在单日内不会损失超过 ¥5,000。',
+    'solution.confidenceLevel': '置信水平',
+    'solution.sampleVaR': '每日 VaR 示例',
+    'solution.timeHorizon': '时间范围',
+    'solution.keyPoints': '了解您的最大日内亏损,衡量风险调整后回报,识别投资组合漏洞,做出明智决策',
+    
+    // Sample Report
+    'report.sampleReport': '样本报告',
+    'report.title': '看看您能',
+    'report.titleHighlight': '获得什么',
+    'report.subtitle': '为您的投资组合提供专业级风险报告',
+    'report.portfolioValue': '投资组合价值',
+    'report.dailyVaR': '每日 VaR (95%)',
+    'report.annualizedReturn': '年化回报率',
+    'report.sharpeRatio': '夏普比率',
+    'report.cvar': 'CVaR (尾部风险)',
+    'report.cvarDesc': '最坏 5% 情景下的预期亏损',
+    'report.topHoldings': '主要持仓',
+    'report.asset': '资产',
+    'report.value': '价值',
+    'report.weight': '权重',
+    'report.riskContribution': '风险贡献',
+    'report.disclaimer': '免责声明：本分析仅供参考，并不构成投资建议。',
+    'report.liveData': '实时数据',
+    'report.calcMethods': '3 种计算方法',
+    'report.calcMethodsDesc': '历史模拟法、参数法、蒙特卡洛法',
+    'report.tailRisk': '尾部风险分析',
+    'report.tailRiskDesc': '极端情景的 CVaR',
+    'report.riskTips': '风险改善建议',
+    'report.riskTipsDesc': '可行的建议',
+    
+    // Services
+    'services.ourServices': '我们的服务',
+    'services.title': '专业风险分析',
+    'services.titleHighlight': '为您量身定制',
+    'services.subtitle': '您理解、衡量和管理投资组合风险所需的一切',
+    'services.readyToStart': '准备好开始使用专业风险分析了吗？',
+    'services.viewPricing': '查看价格方案',
+    
+    // Service Items
+    'service.1.title': '每日 VaR 计算',
+    'service.1.desc': '每天了解您的最大潜在亏损。使用机构级模型更新最新市场数据。',
+    'service.2.title': 'CVaR 尾部风险分析',
+    'service.2.desc': '了解最坏情况下会发生什么。除了 VaR，我们还衡量极端尾部事件。',
+    'service.3.title': '投资组合压力测试',
+    'service.3.desc': '看看您的投资组合在市场崩盘、波动率飙升和黑天鹅事件下的表现。',
+    'service.4.title': '风险改善建议',
+    'service.4.desc': '获得可行的建议，在保持回报的同时降低风险。包括再平衡建议。',
+    'service.5.title': '多方法计算',
+    'service.5.desc': '我们使用历史模拟法、参数法和蒙特卡洛法进行全面分析。',
+    'service.6.title': '专业 PDF 报告',
+    'service.6.desc': '收到精美、详细的报告，您可以与您的顾问分享或保存记录。',
+    'service.learnMore': '了解更多',
+    'service.mostPopular': '最受欢迎',
+    
+    // Pricing
+    'pricing.pricing': '价格',
+    'pricing.title': '简单、',
+    'pricing.titleHighlight': '透明',
+    'pricing.title2': '的价格',
+    'pricing.subtitle': '根据您的投资组合规模选择。专业版和企业版包含初步咨询。',
+    'pricing.oneTimeFee': '一次性费用',
+    'pricing.included': '+ 初步咨询',
+    'pricing.bottomNote': '所有方案都包括安全数据处理和 FRM 认证专家的专业分析。',
+    
+    // Plans
+    'plan.starter.name': '入门版',
+    'plan.starter.stockRange': '< 10 只股票',
+    'plan.starter.desc': '适合小型投资组合',
+    'plan.starter.cta': '开始使用',
+    
+    'plan.professional.name': '专业版',
+    'plan.professional.stockRange': '10 - 30 只股票',
+    'plan.professional.desc': '适合多元化投资组合',
+    'plan.professional.cta': '开始使用',
+    'plan.professional.mostPopular': '最受欢迎',
+    
+    'plan.enterprise.name': '企业版',
+    'plan.enterprise.stockRange': '> 30 只股票',
+    'plan.enterprise.desc': '适合复杂投资组合',
+    'plan.enterprise.cta': '开始使用',
+    
+    // Plan Features
+    'plan.feature.var': '完整 VaR 分析',
+    'plan.feature.cvar': 'CVaR 尾部风险评估',
+    'plan.feature.metrics': '投资组合风险指标',
+    'plan.feature.pdf': '专业 PDF 报告',
+    'plan.feature.walkthrough': '初步咨询',
+    'plan.feature.stress': '压力测试报告',
+    'plan.feature.tips': '风险改善建议',
+    'plan.feature.advanced': '高级压力测试',
+    'plan.feature.plan': '详细风险改善计划',
+    'plan.feature.multi': '多方法计算',
+    'plan.feature.support': '优先支持',
+    
+    // CTA
+    'cta.ready': '准备好了解您的',
+    'cta.realRisk': '真实风险了吗？',
+    'cta.subtitle': '扫描 QR code 联系我们，获取免费的投资组合风险分析。包括初步咨询。',
+    'cta.emailPlaceholder': '输入您的电邮',
+    'cta.getFreeAnalysis': '获取免费分析',
+    'cta.takes2Min': '快速回复',
+    'cta.noSpam': '绝无垃圾邮件',
+    'cta.walkthrough': '+ 初步咨询',
+    'cta.scanWechat': '扫描添加微信',
+    'cta.scanWhatsapp': '扫描 WhatsApp 对话',
+    
+    // Success Dialog
+    'success.title': '您已加入名单！',
+    'success.desc': '感谢您的关注。我们已收到您的电邮，将在 24 小时内通过 kenktwang@gmail.com 与您联系，安排免费投资组合分析和初步咨询。',
+    'success.gotIt': '知道了！',
+    
+    // Footer
+    'footer.tagline': '为每位投资者提供专业风险分析。充满信心地衡量、理解和管理您的投资组合风险。',
+    'footer.services': '服务',
+    'footer.company': '公司',
+    'footer.contact': '联系我们',
+    'footer.certified': '认证机构',
+    'footer.frm': 'FRM 专业人士',
+    'footer.copyright': '© {year} KW-Consultancy。保留所有权利。',
+    'footer.privacy': '隐私政策',
+    'footer.terms': '服务条款',
+  },
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  // Default to Traditional Chinese (zh)
+  const [language, setLanguage] = useState<Language>('zh');
 
   const t = useCallback((key: string): string => {
     const translation = translations[language][key as keyof typeof translations.en];
