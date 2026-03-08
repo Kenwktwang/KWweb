@@ -292,7 +292,7 @@ Remember: Markets reward patient capital. The investors who succeed aren't those
 
 Gold recently did what gold often does: it moved fast, shocked everyone, and then became messy.
 
-On your chart, price surged to a major high area (around **5419**), then sold off sharply. After a move like that, the market usually needs time to "digest." That digestion shows up as sideways, choppy action (a **range**).
+In recent Gold Chart observation, price surged to a major high area (around **5419**), then sold off sharply. After a move like that, the market usually needs time to "digest." That digestion shows up as sideways, choppy action (a **range**).
 
 **Situation in 1 line:**
 
@@ -632,7 +632,7 @@ CBOE 波動率指數（VIX）衡量預期的市場波動率。通常被稱為「
 
 黃金最近做了黃金經常做的事：快速波動，震驚所有人，然後變得混亂。
 
-在您的圖表上，價格飆升至主要高點區域（約 **5419**），然後急劇拋售。在這樣的走勢之後，市場通常需要時間來「消化」。這種消化表現為橫盤、震盪的走勢（**區間**）。
+在最近黃金圖表觀察中，價格飆升至主要高點區域（約 **5419**），然後急劇拋售。在這樣的走勢之後，市場通常需要時間來「消化」。這種消化表現為橫盤、震盪的走勢（**區間**）。
 
 **一句話總結情況：**
 
@@ -972,7 +972,7 @@ CBOE 波动率指数（VIX）衡量预期的市场波动率。通常被称为「
 
 黄金最近做了黄金经常做的事：快速波动，震惊所有人，然后变得混乱。
 
-在您的图表上，价格飙升至主要高点区域（约 **5419**），然后急剧抛售。在这样的走势之后，市场通常需要时间来「消化」。这种消化表现为横盘、震荡的走势（**区间**）。
+在最近黄金图表观察中，价格飙升至主要高点区域（约 **5419**），然后急剧抛售。在这样的走势之后，市场通常需要时间来「消化」。这种消化表现为横盘、震荡的走势（**区间**）。
 
 **一句话总结情况：**
 
