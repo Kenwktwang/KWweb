@@ -5,6 +5,7 @@ import Problem from './sections/Problem';
 import Solution from './sections/Solution';
 import SampleReport from './sections/SampleReport';
 import Services from './sections/Services';
+import Blog from './sections/Blog';
 import Pricing from './sections/Pricing';
 import CTA from './sections/CTA';
 import Footer from './sections/Footer';
@@ -20,6 +21,7 @@ function App() {
           <Solution />
           <SampleReport />
           <Services />
+          <Blog />
           <Pricing />
           <CTA />
         </main>

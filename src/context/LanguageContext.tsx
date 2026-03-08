@@ -179,6 +179,17 @@ const translations = {
     'footer.copyright': '© {year} KW-Consultancy. All rights reserved.',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
+    
+    // Blog
+    'nav.blog': 'Insights',
+    'blog.insights': 'Market Insights',
+    'blog.title': 'Latest',
+    'blog.titleHighlight': 'Analysis',
+    'blog.subtitle': 'Expert perspectives on risk management, market trends, and investment strategies to help you make informed decisions.',
+    'blog.featured': 'Featured',
+    'blog.readMore': 'Read More',
+    'blog.moreComing': 'More insights coming soon. Subscribe to get notified.',
+    'blog.getNotified': 'Get Notified',
   },
   zh: {
     // Navigation
@@ -350,6 +361,17 @@ const translations = {
     'footer.copyright': '© {year} KW-Consultancy。保留所有權利。',
     'footer.privacy': '隱私政策',
     'footer.terms': '服務條款',
+    
+    // Blog
+    'nav.blog': '洞察',
+    'blog.insights': '市場洞察',
+    'blog.title': '最新',
+    'blog.titleHighlight': '分析',
+    'blog.subtitle': '風險管理、市場趨勢和投資策略的專業觀點，助您做出明智決策。',
+    'blog.featured': '精選',
+    'blog.readMore': '閱讀更多',
+    'blog.moreComing': '更多洞察即將推出。訂閱以獲取通知。',
+    'blog.getNotified': '獲取通知',
   },
   cn: {
     // Navigation
@@ -521,6 +543,17 @@ const translations = {
     'footer.copyright': '© {year} KW-Consultancy。保留所有权利。',
     'footer.privacy': '隐私政策',
     'footer.terms': '服务条款',
+    
+    // Blog
+    'nav.blog': '洞察',
+    'blog.insights': '市场洞察',
+    'blog.title': '最新',
+    'blog.titleHighlight': '分析',
+    'blog.subtitle': '风险管理、市场趋势和投资策略的专业观点，助您做出明智决策。',
+    'blog.featured': '精选',
+    'blog.readMore': '阅读更多',
+    'blog.moreComing': '更多洞察即将推出。订阅以获取通知。',
+    'blog.getNotified': '获取通知',
   },
 };
 
