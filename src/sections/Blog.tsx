@@ -403,6 +403,45 @@ Gold is consolidating after a violent move, DXY is still strong, so the best pla
       readTime: '7 min read',
       tags: ['Gold', 'XAUUSD', 'Trading Strategy'],
     },
+    {
+      id: '5',
+      slug: 'oil-crisis-portfolio-risk',
+      title: 'A Week of Oil Crisis: The Real Risk Isn\'t Oil—It\'s Your Portfolio',
+      excerpt: 'When oil price shocks push markets into high volatility, the critical question isn\'t where oil is heading—it\'s how much your portfolio could lose in the worst-case scenario.',
+      content: `# A Week of Oil Crisis: The Real Risk Isn't Oil—It's Your Portfolio
+
+This week, news around oil prices and geopolitical conflicts has been intensifying. Many investors' first instinct is to predict direction: Will oil keep rising? Should I chase the energy sector? But for investors, the far more important question is this: Once an oil price shock pushes markets into a high-volatility regime, how much could your portfolio lose in a worst-case scenario?
+
+The reason is that oil shocks rarely stay confined to the energy market. As a critical cost input for the global economy, a rapid rise in oil prices typically triggers a chain reaction across three areas:
+
+First, inflation expectations rise.  
+Second, the interest-rate path may become "higher for longer."  
+Third, risk premiums increase—investors demand higher returns to compensate for uncertainty.
+
+The result: equity valuations come under pressure, credit spreads widen, risk appetite declines, and volatility surges. What's worse, under stress, correlations between assets often spike suddenly. You may think your portfolio is well diversified, but in a systemic shock, many assets can fall together. This is the classic characteristic of tail risk: usually invisible, but when it strikes, losses tend to amplify non-linearly. At the same time, liquidity dries up and execution costs rise, making stop-losses and rebalancing harder to complete.
+
+Therefore, the key to investing isn't just "prediction"—it's "quantifying and managing the worst-case scenario." This is exactly why VaR (Value at Risk) exists. VaR is not a crystal ball; it doesn't tell you exactly how much you will lose. Instead, it uses a consistent, comparable methodology to answer a manageable question:
+
+Over a given time horizon and confidence level, what is the approximate maximum loss your portfolio could face?
+
+When volatility rises and correlations strengthen, VaR becomes more sensitive in reflecting that "risk levels are escalating," helping investors make decisions with numbers rather than emotions: Should risk exposure be reduced? Should liquidity buffers be increased? Is hedging or restructuring warranted?
+
+But in practice, looking only at "total portfolio VaR" is often insufficient. Total VaR can tell you "how dangerous the whole portfolio is," but not "where the danger is coming from or what to tackle first." Truly actionable risk management requires breaking risk down into finer management units—and this is where client-level VaR analysis delivers value.
+
+Client-level VaR can decompose risk down to the client, account, or strategy level, answering four of the most important management questions:
+
+1) Which clients (or accounts) contribute the most risk?  
+2) What are the main risk drivers (oil, interest rates, FX, credit, equity volatility)?  
+3) Where is risk concentrated in terms of behavior and structure (leverage, concentrated positions, derivatives non-linearity, high turnover)?  
+4) If markets become more volatile, which clients should be prioritized for action (de-risking, hedging, margin calls, tighter limits)?
+
+When you can turn risk from "a single number" into a "traceable, rankable, layerable" list, VaR truly upgrades from a reporting metric to a management tool: faster identification of concentration risk, more precise allocation of capital and limits, more effective hedging and deleveraging strategies, and an easier way to explain to management "why we must act now."
+
+Markets will always have surprises. In the end, the investors who survive and compound steadily over the long term are often not the best at guessing directions, but those who are clearest about what could happen to them in the worst-case scenario—and have the ability to quickly bring risk back within a controllable range. This week's oil market volatility is just another reminder: risk management is not a cost; it is the survivability of investing.`,
+      date: '2026-03-29',
+      readTime: '8 min read',
+      tags: ['Oil', 'VaR', 'Portfolio Risk', 'Tail Risk'],
+    },
   ],
   zh: [
     {
@@ -786,6 +825,45 @@ ORB = 開盤區間突破（紐約開盤區間）。
       readTime: '7 分鐘閱讀',
       tags: ['黃金', 'XAUUSD', '交易策略'],
     },
+    {
+      id: '5',
+      slug: 'oil-crisis-portfolio-risk',
+      title: '油價危機的一週：真正的風險不在油，而在你的投資組合',
+      excerpt: '當油價衝擊把市場推入高波動狀態，關鍵問題不是油價會漲到哪裡，而是你的投資組合在「最差情境」下會承受多大損失。',
+      content: `# 油價危機的一週：真正的風險不在油，而在你的投資組合
+
+這一週，油價與地緣衝突相關的消息不斷發酵。很多投資者第一反應是判斷方向：油價還會不會繼續上漲？要不要追能源板塊？但對投資者而言，更關鍵的問題其實是：一旦油價衝擊把市場推入高波動狀態，你的投資組合在「最差情境」下會承受多大損失？
+
+原因在於，油價衝擊通常不會只停留在能源市場。油作為全球經濟的關鍵成本，一旦快速上行，市場往往會連鎖重估三件事：
+
+第一，通脹預期上升；  
+第二，利率路徑可能更「高、更久」；  
+第三，風險溢價上升（投資者要求更高回報來補償不確定性）。
+
+結果是：股票估值受壓、信用利差擴大、資金風險偏好下降，波動率走高。更麻煩的是，在壓力情境下，資產之間的相關性經常會突然上升——你以為已經分散配置，但在系統性衝擊裡，很多資產會「同時下跌」。這就是典型的尾部風險特徵：平時看似不顯著，但一旦發生，損失往往呈現非線性放大，同時疊加流動性下降、執行成本上升，使得止損與再平衡更難完成。
+
+因此，投資的關鍵不只是「預測」，而是「量化並管理最差情境」。這也是 VaR（Value at Risk，風險價值）存在的意義。VaR 不是水晶球，它並不告訴你一定會虧多少，而是用一致、可比較的方法回答一個可管理的問題：
+
+在給定時間範圍與置信水平下，你的投資組合可能面臨的最大損失大約是多少？
+
+當波動率上升、相關性變強時，VaR 會更敏感地反映「風險水平正在升級」，幫助投資者用數字而非情緒做決策：是否需要降低風險敞口？是否需要增加流動性緩衝？是否需要做對沖或調整倉位結構？
+
+但在實際風險管理中，只看「整體 VaR」往往不夠。整體 VaR 只能告訴你「整個盤子有多危險」，卻不能告訴你「危險來自哪裡、應該先處理誰」。真正可執行的風險管理，需要把風險拆到更細的管理單元——這就是「客戶級 VaR 分析」的價值所在。
+
+客戶級 VaR 能夠把風險拆解到客戶／帳戶／策略層級，回答四個最重要的管理問題：
+
+1）哪些客戶（或帳戶）貢獻了最大的風險？  
+2）風險主要由哪些因子驅動（油、利率、匯率、信用、股市波動）？  
+3）風險集中在什麼行為與結構上（槓桿、集中持倉、衍生品非線性、短期高換手）？  
+4）如果市場進一步波動，哪些客戶需要優先採取動作（減倉、對沖、追加保證金、收緊限額）？
+
+當你能把風險從「一個總數」變成「可追溯、可排序、可分層處理」的清單，VaR 才真正從報表指標升級為管理工具：更快定位集中風險、更精準分配資本與限額、更有效制定對沖與去槓桿策略，也更容易向管理層解釋「為什麼現在必須行動」。
+
+市場永遠會有突發事件。最終能長期生存並穩定複利的投資者，往往不是最會猜方向的人，而是最清楚自己在最差情境下會發生什麼、並且有能力快速把風險壓回可控範圍的人。這一週的油市波動，只是再一次提醒：風險管理不是成本，而是投資的生存能力。`,
+      date: '2026-03-29',
+      readTime: '8 分鐘閱讀',
+      tags: ['油價', 'VaR', '投資組合風險', '尾部風險'],
+    },
   ],
   cn: [
     {
@@ -1168,6 +1246,45 @@ ORB = 开盘区间突破（纽约开盘区间）。
       date: '2026-03-08',
       readTime: '7 分钟阅读',
       tags: ['黄金', 'XAUUSD', '交易策略'],
+    },
+    {
+      id: '5',
+      slug: 'oil-crisis-portfolio-risk',
+      title: '油价危机的一周：真正的风险不在油，而在你的投资组合',
+      excerpt: '当油价冲击把市场推入高波动状态，关键问题不是油价会涨到哪里，而是你的投资组合在「最差情境」下会承受多大损失。',
+      content: `# 油价危机的一周：真正的风险不在油，而在你的投资组合
+
+这一周，油价与地缘冲突相关的消息不断发酵。很多投资者第一反应是判断方向：油价还会不会继续上涨？要不要追能源板块？但对投资者而言，更关键的问题其实是：一旦油价冲击把市场推入高波动状态，你的投资组合在「最差情境」下会承受多大损失？
+
+原因在于，油价冲击通常不会只停留在能源市场。油作为全球经济的关键成本，一旦快速上行，市场往往会连锁重估三件事：
+
+第一，通胀预期上升；  
+第二，利率路径可能更「高、更久」；  
+第三，风险溢价上升（投资者要求更高回报来补偿不确定性）。
+
+结果是：股票估值承压、信用利差扩大、资金风险偏好下降，波动率走高。更麻烦的是，在压力情境下，资产之间的相关性经常会突然上升——你以为已经分散配置，但在系统性冲击里，很多资产会「同时下跌」。这就是典型的尾部风险特征：平时看似不显著，但一旦发生，损失往往呈现非线性放大，同时叠加流动性下降、执行成本上升，使得止损与再平衡更难完成。
+
+因此，投资的关键不只是「预测」，而是「量化并管理最差情境」。这也是 VaR（Value at Risk，风险价值）存在的意义。VaR 不是水晶球，它并不告诉你一定会亏多少，而是用一致、可比较的方法回答一个可管理的问题：
+
+在给定时间范围与置信水平下，你的投资组合可能面临的最大损失大约是多少？
+
+当波动率上升、相关性变强时，VaR 会更敏感地反映「风险水平正在升级」，帮助投资者用数字而非情绪做决策：是否需要降低风险敞口？是否需要增加流动性缓冲？是否需要做对冲或调整仓位结构？
+
+但在实际风险管理中，只看「整体 VaR」往往不够。整体 VaR 只能告诉你「整个盘子有多危险」，却不能告诉你「危险来自哪里、应该先处理谁」。真正可执行的风险管理，需要把风险拆到更细的管理单元——这就是「客户级 VaR 分析」的价值所在。
+
+客户级 VaR 能够把风险拆解到客户/账户/策略层级，回答四个最重要的管理问题：
+
+1）哪些客户（或账户）贡献了最大的风险？  
+2）风险主要由哪些因子驱动（油、利率、汇率、信用、股市波动）？  
+3）风险集中在什么行为与结构上（杠杆、集中持仓、衍生品非线性、短期高换手）？  
+4）如果市场进一步波动，哪些客户需要优先采取动作（减仓、对冲、追加保证金、收紧限额）？
+
+当你能把风险从「一个总数」变成「可追溯、可排序、可分层处理」的清单，VaR 才真正从报表指标升级为管理工具：更快定位集中风险、更精准分配资本与限额、更有效制定对冲与去杠杆策略，也更容易向管理层解释「为什么现在必须行动」。
+
+市场永远会有突发事件。最终能长期生存并稳定复利的投资者，往往不是最会猜方向的人，而是最清楚自己在最差情境下会发生什么、并且有能力快速把风险压回可控范围的人。这一周的油市波动，只是再一次提醒：风险管理不是成本，而是投资的生存能力。`,
+      date: '2026-03-29',
+      readTime: '8 分钟阅读',
+      tags: ['油价', 'VaR', '投资组合风险', '尾部风险'],
     },
   ],
 };

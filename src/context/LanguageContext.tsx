@@ -166,7 +166,7 @@ const translations = {
     
     // Success Dialog
     'success.title': 'You\'re on the List!',
-    'success.desc': 'Thank you for your interest. We\'ve received your email and will contact you at kenktwang@gmail.com within 24 hours to schedule your free portfolio analysis and initial consultation.',
+    'success.desc': 'Thank you for your interest. We\'ve received your email and will contact you at info@openminai.com within 24 hours to schedule your free portfolio analysis and initial consultation.',
     'success.gotIt': 'Got it!',
     
     // Footer
@@ -348,7 +348,7 @@ const translations = {
     
     // Success Dialog
     'success.title': '您已加入名單！',
-    'success.desc': '感謝您的關注。我們已收到您的電郵，將在 24 小時內通過 kenktwang@gmail.com 與您聯繫，安排免費投資組合分析和初步諮詢。',
+    'success.desc': '感謝您的關注。我們已收到您的電郵，將在 24 小時內通過 info@openminai.com 與您聯繫，安排免費投資組合分析和初步諮詢。',
     'success.gotIt': '知道了！',
     
     // Footer
@@ -530,7 +530,7 @@ const translations = {
     
     // Success Dialog
     'success.title': '您已加入名单！',
-    'success.desc': '感谢您的关注。我们已收到您的电邮，将在 24 小时内通过 kenktwang@gmail.com 与您联系，安排免费投资组合分析和初步咨询。',
+    'success.desc': '感谢您的关注。我们已收到您的电邮，将在 24 小时内通过 info@openminai.com 与您联系，安排免费投资组合分析和初步咨询。',
     'success.gotIt': '知道了！',
     
     // Footer
