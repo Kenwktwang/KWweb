@@ -23,11 +23,14 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1a1a1a]"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0">
-        <img
-          src="/images/hero-bg.jpg"
-          alt="Background"
+        <video
+          src="/images/Hero-bg-moving.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/50 via-transparent to-[#1a1a1a]/80" />

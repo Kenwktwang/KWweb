@@ -33,11 +33,14 @@ const CTA = () => {
       ref={sectionRef}
       className="relative py-24 md:py-32 overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src="/images/cta-bg.jpg"
-          alt="Background"
+        <video
+          src="/images/cta-bg-moving.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/80 to-[#1a1a1a]/60" />
