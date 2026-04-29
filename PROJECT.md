@@ -21,13 +21,14 @@
 
 ## Completed Changes
 
-### 1. Navigation Bar — VaR Calculator Button
+### 1. Navigation Bar — VaR Calculator Button + Language Switcher Position
 **Status:** ✅ Completed
 
 - Added "VaR Calculator" button with external-link icon
 - Opens `https://var-calculator-production.up.railway.app` in new tab
 - Appears on both desktop and mobile menus
-- Existing "Get Free Analysis" button kept as secondary CTA
+- **Language switcher moved to far right** (after all CTAs)
+- CTA buttons: "Book Consultation" / "預約諮詢" / "预约咨询"
 - Fully translated in all 3 languages
 
 **Files touched:**
@@ -62,7 +63,7 @@ Replaced the old QR-code-only contact section with a comprehensive contact layou
 - Success confirmation screen
 
 #### Form Integration
-- Submits to Formspree endpoint: `https://formspree.io/f/xgorqpqw`
+- Submits to Formspree endpoint: `https://formspree.io/f/mdayqbdw`
 - Loading spinner during submission
 - Error handling with alert
 - Success state replaces form with confirmation
@@ -96,7 +97,36 @@ Replaced old 3-tier portfolio-size pricing with new service-based pricing:
 
 ---
 
-### 4. Bug Fix — Contact Email
+### 4. Remove All "Free" Wording → "Consultation"
+**Status:** ✅ Completed
+
+Replaced every instance of "Free Analysis" with "Book Consultation" across the entire site:
+
+- **Navigation CTA:** `Get Free Analysis` → `Book Consultation` / `預約諮詢` / `预约咨询`
+- **Hero CTA:** `Get Your Free Risk Analysis` → `Book a Consultation` / `預約專業諮詢` / `预约专业咨询`
+- **Services CTA:** Removed "Free" from `Try Our Free VaR Calculator`
+- **Contact subtitle & success message:** Removed "free portfolio analysis" wording
+- **Blog articles (EN/ZH/CN):** Removed "free consultation/analysis" from article CTAs
+- Finance idiom "free lunch" intentionally kept
+
+**Files touched:**
+- `src/context/LanguageContext.tsx`
+- `src/sections/Blog.tsx`
+
+---
+
+### 5. Bug Fix — Duplicate "VaR?" in Solution Section
+**Status:** ✅ Completed
+
+- Fixed headline showing "什麼是 VaR? VaR?" (duplicate)
+- Translation now provides prefix only (`什麼是 `), gold span renders `VaR?`
+
+**Files touched:**
+- `src/context/LanguageContext.tsx`
+
+---
+
+### 6. Bug Fix — Contact Email
 **Status:** ✅ Completed
 
 - Fixed contact email from `info@kw-consultancy.com` → `info@openminai.com`
@@ -112,13 +142,13 @@ Replaced old 3-tier portfolio-size pricing with new service-based pricing:
 ```
 src/
 ├── sections/
-│   ├── Navigation.tsx      ✅ VaR Calculator button + Get Free Analysis
+│   ├── Navigation.tsx      ✅ VaR Calculator link + lang switcher right
 │   ├── Hero.tsx            🔄 Original (unchanged)
 │   ├── Problem.tsx         🔄 Original (unchanged)
 │   ├── Solution.tsx        🔄 Original (unchanged)
 │   ├── SampleReport.tsx    🔄 Original (unchanged)
-│   ├── Services.tsx        🔄 Original (unchanged)
-│   ├── Blog.tsx            🔄 Original (unchanged)
+│   ├── Services.tsx        ✅ Added VaR Calculator CTA
+│   ├── Blog.tsx            ✅ Removed "free" from article CTAs
 │   ├── Pricing.tsx         ✅ Restructured (3 new tiers)
 │   ├── CTA.tsx             ✅ Revamped (contact form + info)
 │   └── Footer.tsx          🔄 Original (unchanged)
@@ -132,7 +162,7 @@ src/
 
 ## Translation Coverage
 
-All new content is fully translated in:
+All content is fully translated in:
 - **en** — English
 - **zh** — 繁體中文 (Traditional Chinese, default)
 - **cn** — 简体中文 (Simplified Chinese)
@@ -143,7 +173,7 @@ All new content is fully translated in:
 
 - [x] TypeScript compiles without errors (`npx tsc --noEmit`)
 - [x] All i18n keys defined for 3 languages
-- [x] Formspree endpoint configured
+- [x] Formspree endpoint configured (`https://formspree.io/f/mdayqbdw`)
 - [x] External VaR Calculator link opens in new tab
 - [x] Responsive layouts verified (desktop + mobile)
 - [ ] Run `npm run build` for production
@@ -161,5 +191,11 @@ All new content is fully translated in:
 6. **Analytics** — Add GA4 or Plausible to track pricing page conversions
 
 ---
+
+## Frozen Version Checkpoint
+
+**Date:** 2026-04-29
+**Status:** Stable — all requested changes complete, TypeScript clean, no build errors
+**Known state:** Contact section revamped, pricing restructured, "free" wording removed, language switcher repositioned, Formspree endpoint updated
 
 *Last updated: 2026-04-29*

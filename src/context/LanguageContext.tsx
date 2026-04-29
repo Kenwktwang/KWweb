@@ -53,7 +53,7 @@ const translations = {
     
     // Solution Section
     'solution.theSolution': 'The Solution',
-    'solution.whatIsVaR': 'What is VaR?',
+    'solution.whatIsVaR': 'What is ',
     'solution.subtitle': 'Value at Risk: The Metric Professionals Use',
     'solution.desc1': 'VaR (Value at Risk) tells you the maximum amount you could lose on your portfolio over a specific time period, with a given confidence level.',
     'solution.desc2': 'For example: If your daily VaR is',
@@ -267,7 +267,7 @@ const translations = {
     
     // Solution Section
     'solution.theSolution': '解決方案',
-    'solution.whatIsVaR': '什麼是 VaR？',
+    'solution.whatIsVaR': '什麼是 ',
     'solution.subtitle': '風險價值：專業人士使用的指標',
     'solution.desc1': 'VaR（風險價值）告訴您在給定置信水平下，特定時間內投資組合可能損失的最大金額。',
     'solution.desc2': '例如：如果您的每日 VaR 為',
@@ -481,7 +481,7 @@ const translations = {
     
     // Solution Section
     'solution.theSolution': '解决方案',
-    'solution.whatIsVaR': '什么是 VaR？',
+    'solution.whatIsVaR': '什么是 ',
     'solution.subtitle': '风险价值：专业人士使用的指标',
     'solution.desc1': 'VaR（风险价值）告诉您在给定置信水平下，特定时间内投资组合可能损失的最大金额。',
     'solution.desc2': '例如：如果您的每日 VaR 为',
