@@ -87,9 +87,20 @@ const Navigation = () => {
               <LanguageSwitcher />
             </div>
             
+            <a
+              href="https://var-calculator-production.up.railway.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-sm py-3 px-6 inline-flex items-center gap-1.5"
+            >
+              {t('nav.varCalculator')}
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
             <button
               onClick={() => scrollToSection('#cta')}
-              className="btn-primary text-sm py-3 px-6"
+              className="btn-secondary text-sm py-3 px-6"
             >
               {t('nav.getFreeAnalysis')}
             </button>
@@ -137,9 +148,20 @@ const Navigation = () => {
               <LanguageSwitcher />
             </div>
             
+            <a
+              href="https://var-calculator-production.up.railway.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full text-center mt-4 flex items-center justify-center gap-1.5"
+            >
+              {t('nav.varCalculator')}
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
             <button
               onClick={() => scrollToSection('#cta')}
-              className="btn-primary w-full text-center mt-4"
+              className="btn-secondary w-full text-center mt-4"
             >
               {t('nav.getFreeAnalysis')}
             </button>

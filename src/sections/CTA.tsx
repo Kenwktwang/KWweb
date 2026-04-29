@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { Clock, Video, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Lock, CheckCircle, Loader2 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const CTA = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
   const sectionRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
 
@@ -17,7 +18,7 @@ const CTA = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -27,118 +28,270 @@ const CTA = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormState('submitting');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xgorqpqw', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setFormState('success');
+        form.reset();
+      } else {
+        setFormState('idle');
+        alert(t('cta.submitError'));
+      }
+    } catch {
+      setFormState('idle');
+      alert(t('cta.submitError'));
+    }
+  };
+
+  const contactMethods = [
+    {
+      icon: Mail,
+      title: t('cta.emailTitle'),
+      desc: t('cta.emailDesc'),
+      link: 'mailto:info@openminai.com',
+      linkText: 'info@openminai.com',
+    },
+    {
+      icon: Phone,
+      title: t('cta.phoneTitle'),
+      desc: t('cta.phoneDesc'),
+      link: 'tel:+85265928971',
+      linkText: '+852 6592 8971',
+    },
+    {
+      icon: MapPin,
+      title: t('cta.regionsTitle'),
+      desc: t('cta.regionsDesc'),
+      link: null,
+      linkText: t('cta.regionsValue'),
+    },
+  ];
+
+  const serviceOptions = [
+    { value: '', label: t('cta.selectService') },
+    { value: 'var-analysis', label: t('cta.serviceVar') },
+    { value: 'risk-report', label: t('cta.serviceReport') },
+    { value: 'stress-testing', label: t('cta.serviceStress') },
+    { value: 'consulting', label: t('cta.serviceConsulting') },
+    { value: 'enterprise', label: t('cta.serviceEnterprise') },
+    { value: 'other', label: t('cta.serviceOther') },
+  ];
+
   return (
     <section
       id="cta"
       ref={sectionRef}
-      className="relative py-24 md:py-32 overflow-hidden"
+      className="relative py-24 md:py-32 overflow-hidden bg-[#1a1a1a]"
     >
-      {/* Background Video */}
-      <div className="absolute inset-0">
-        <video
-          src="/images/cta-bg-moving.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, #c9a962 1px, transparent 0)`,
+            backgroundSize: '40px 40px',
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/80 to-[#1a1a1a]/60" />
-      </div>
-
-      {/* Floating Shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute border border-white/10 rounded-full animate-float"
-            style={{
-              width: `${40 + Math.random() * 80}px`,
-              height: `${40 + Math.random() * 80}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${6 + Math.random() * 4}s`,
-            }}
-          />
-        ))}
       </div>
 
       <div className="container-premium relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Headline */}
-          <h2
-            className={`text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
-            }`}
-          >
+        {/* Section Header */}
+        <div
+          className={`text-center mb-16 transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             {t('cta.ready')} <span className="text-gradient-gold">{t('cta.realRisk')}</span>
           </h2>
-
-          {/* Subheadline */}
-          <p
-            className={`text-lg text-white/80 mb-12 transition-all duration-700 delay-200 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-            }`}
-          >
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
             {t('cta.subtitle')}
           </p>
+        </div>
 
-          {/* Contact Options */}
-          <div
-            className={`grid md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-10 transition-all duration-700 delay-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-            }`}
-          >
-            {/* WeChat */}
-            <div className="bg-white rounded-2xl p-6 shadow-xl">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <MessageCircle className="w-6 h-6 text-green-500" />
-                <h3 className="text-xl font-bold text-[#1a1a1a]">WeChat</h3>
-              </div>
-              <div className="max-w-[220px] mx-auto mb-4">
-                <img
-                  src="/images/wechat-qr.png"
-                  alt="WeChat QR Code"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <p className="text-sm text-[#666]">{t('cta.scanWechat')}</p>
+        {/* Contact Grid */}
+        <div
+          className={`grid lg:grid-cols-2 gap-10 lg:gap-16 max-w-6xl mx-auto transition-all duration-700 delay-200 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2">{t('cta.contactMethods')}</h3>
+              <p className="text-white/60">{t('cta.contactMethodsSubtitle')}</p>
             </div>
 
-            {/* WhatsApp */}
-            <div className="bg-white rounded-2xl p-6 shadow-xl">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <svg className="w-6 h-6 text-[#25D366]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                <h3 className="text-xl font-bold text-[#1a1a1a]">WhatsApp</h3>
+            {/* Contact Methods */}
+            <div className="space-y-4">
+              {contactMethods.map((method, index) => (
+                <a
+                  key={index}
+                  href={method.link || undefined}
+                  className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#c9a962]/40 hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <div className="p-3 rounded-lg bg-[#c9a962]/10 text-[#c9a962] group-hover:bg-[#c9a962]/20 transition-colors">
+                    <method.icon className="w-5 h-5" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-white font-semibold mb-0.5">{method.title}</h4>
+                    <p className="text-white/50 text-sm mb-1">{method.desc}</p>
+                    <span className="text-[#c9a962] text-sm font-medium">
+                      {method.linkText}
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {/* Business Hours */}
+            <div className="p-5 rounded-xl bg-white/5 border border-white/10">
+              <div className="flex items-center gap-2 mb-3">
+                <Clock className="w-5 h-5 text-[#c9a962]" />
+                <h4 className="text-white font-semibold">{t('cta.businessHoursTitle')}</h4>
               </div>
-              <div className="max-w-[220px] mx-auto mb-4">
-                <img
-                  src="/images/whatsapp-qr.png"
-                  alt="WhatsApp QR Code"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <p className="text-sm text-[#666]">{t('cta.scanWhatsapp')}</p>
+              <p className="text-white/60 text-sm leading-relaxed whitespace-pre-line">
+                {t('cta.businessHoursDetail')}
+              </p>
+              <p className="text-white/40 text-sm mt-2 italic">
+                {t('cta.businessHoursNote')}
+              </p>
             </div>
           </div>
 
-          {/* Trust Indicators */}
-          <div
-            className={`flex flex-wrap items-center justify-center gap-6 transition-all duration-700 delay-400 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-            }`}
-          >
-            <div className="flex items-center gap-2 text-white/70">
-              <Clock className="w-4 h-4 text-[#c9a962]" />
-              <span className="text-sm">{t('cta.takes2Min')}</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/70">
-              <Video className="w-4 h-4 text-[#c9a962]" />
-              <span className="text-sm">{t('cta.walkthrough')}</span>
-            </div>
+          {/* Contact Form */}
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
+            {formState === 'success' ? (
+              <div className="h-full flex flex-col items-center justify-center text-center py-12">
+                <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
+                <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">{t('success.title')}</h3>
+                <p className="text-[#666]">{t('success.desc')}</p>
+                <button
+                  onClick={() => setFormState('idle')}
+                  className="mt-6 btn-primary"
+                >
+                  {t('cta.sendAnother')}
+                </button>
+              </div>
+            ) : (
+              <>
+                <h3 className="text-xl font-bold text-[#1a1a1a] mb-6">
+                  {t('cta.sendInquiry')}
+                </h3>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="form-group">
+                      <label htmlFor="name" className="block text-sm font-medium text-[#333] mb-1.5">
+                        {t('cta.name')} <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder={t('cta.namePlaceholder')}
+                        className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-[#c9a962] focus:ring-2 focus:ring-[#c9a962]/20 outline-none transition-all text-[#333] placeholder:text-gray-400"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="phone" className="block text-sm font-medium text-[#333] mb-1.5">
+                        {t('cta.phone')} <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        placeholder={t('cta.phonePlaceholder')}
+                        className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-[#c9a962] focus:ring-2 focus:ring-[#c9a962]/20 outline-none transition-all text-[#333] placeholder:text-gray-400"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email" className="block text-sm font-medium text-[#333] mb-1.5">
+                      {t('cta.emailTitle')}
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder={t('cta.emailPlaceholder')}
+                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-[#c9a962] focus:ring-2 focus:ring-[#c9a962]/20 outline-none transition-all text-[#333] placeholder:text-gray-400"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="service" className="block text-sm font-medium text-[#333] mb-1.5">
+                      {t('cta.serviceOfInterest')}
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-[#c9a962] focus:ring-2 focus:ring-[#c9a962]/20 outline-none transition-all text-[#333] bg-white"
+                    >
+                      {serviceOptions.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="message" className="block text-sm font-medium text-[#333] mb-1.5">
+                      {t('cta.message')} <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={4}
+                      placeholder={t('cta.messagePlaceholder')}
+                      className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-[#c9a962] focus:ring-2 focus:ring-[#c9a962]/20 outline-none transition-all text-[#333] placeholder:text-gray-400 resize-none"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={formState === 'submitting'}
+                    className="btn-primary w-full flex items-center justify-center gap-2 py-3 disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {formState === 'submitting' ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        {t('cta.sending')}
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        {t('cta.send')}
+                      </>
+                    )}
+                  </button>
+
+                  <p className="text-xs text-gray-400 text-center flex items-center justify-center gap-1">
+                    <Lock className="w-3 h-3" />
+                    {t('cta.confidential')}
+                  </p>
+                </form>
+              </>
+            )}
           </div>
         </div>
       </div>

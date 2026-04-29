@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Check, Sparkles, PieChart, Video, HeadphonesIcon } from 'lucide-react';
+import { Check, Sparkles, Calculator, FileText, Crown, Video } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Pricing = () => {
@@ -9,60 +9,60 @@ const Pricing = () => {
 
   const plans = [
     {
-      name: t('plan.starter.name'),
-      price: 'HKD 250',
-      stockRange: t('plan.starter.stockRange'),
-      description: t('plan.starter.desc'),
-      icon: PieChart,
+      key: 'calculator',
+      name: t('plan.calculator.name'),
+      price: 'HKD 30',
+      billing: t('plan.calculator.billing'),
+      description: t('plan.calculator.desc'),
+      icon: Calculator,
       features: [
-        t('plan.feature.var'),
-        t('plan.feature.cvar'),
-        t('plan.feature.metrics'),
-        t('plan.feature.pdf'),
+        t('plan.calculator.f1'),
+        t('plan.calculator.f2'),
+        t('plan.calculator.f3'),
+        t('plan.calculator.f4'),
       ],
-      cta: t('plan.starter.cta'),
+      cta: t('plan.calculator.cta'),
       highlighted: false,
-      hasWalkthrough: false,
+      badge: null,
     },
     {
-      name: t('plan.professional.name'),
-      price: 'HKD 590',
-      stockRange: t('plan.professional.stockRange'),
-      description: t('plan.professional.desc'),
-      icon: Video,
+      key: 'bespoke',
+      name: t('plan.bespoke.name'),
+      price: 'HKD 290',
+      billing: t('plan.bespoke.billing'),
+      description: t('plan.bespoke.desc'),
+      icon: FileText,
       features: [
-        t('plan.feature.var'),
-        t('plan.feature.cvar'),
-        t('plan.feature.metrics'),
-        t('plan.feature.pdf'),
-        t('plan.feature.stress'),
-        t('plan.feature.tips'),
-        t('plan.feature.walkthrough'),
+        t('plan.bespoke.f1'),
+        t('plan.bespoke.f2'),
+        t('plan.bespoke.f3'),
+        t('plan.bespoke.f4'),
+        t('plan.bespoke.f5'),
+        t('plan.bespoke.f6'),
       ],
-      cta: t('plan.professional.cta'),
+      cta: t('plan.bespoke.cta'),
       highlighted: true,
-      hasWalkthrough: true,
+      badge: t('plan.bespoke.badge'),
     },
     {
-      name: t('plan.enterprise.name'),
-      price: 'HKD 1,000',
-      stockRange: t('plan.enterprise.stockRange'),
-      description: t('plan.enterprise.desc'),
-      icon: HeadphonesIcon,
+      key: 'premium',
+      name: t('plan.premium.name'),
+      price: 'HKD 590',
+      billing: t('plan.premium.billing'),
+      description: t('plan.premium.desc'),
+      icon: Crown,
       features: [
-        t('plan.feature.var'),
-        t('plan.feature.cvar'),
-        t('plan.feature.metrics'),
-        t('plan.feature.pdf'),
-        t('plan.feature.advanced'),
-        t('plan.feature.plan'),
-        t('plan.feature.multi'),
-        t('plan.feature.walkthrough'),
-        t('plan.feature.support'),
+        t('plan.premium.f1'),
+        t('plan.premium.f2'),
+        t('plan.premium.f3'),
+        t('plan.premium.f4'),
+        t('plan.premium.f5'),
+        t('plan.premium.f6'),
       ],
-      cta: t('plan.enterprise.cta'),
+      cta: t('plan.premium.cta'),
       highlighted: false,
-      hasWalkthrough: true,
+      badge: null,
+      consultation: true,
     },
   ];
 
@@ -132,13 +132,13 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-start">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
             
             return (
               <div
-                key={plan.name}
+                key={plan.key}
                 className={`relative transition-all duration-600 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
@@ -147,9 +147,9 @@ const Pricing = () => {
                 }}
               >
                 {/* Popular Badge */}
-                {plan.highlighted && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#c9a962] text-[#1a1a1a] text-sm font-bold z-10 animate-pulse-glow">
-                    {t('plan.professional.mostPopular')}
+                {plan.highlighted && plan.badge && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#c9a962] text-[#1a1a1a] text-sm font-bold z-10 animate-pulse-glow whitespace-nowrap">
+                    {plan.badge}
                   </div>
                 )}
 
@@ -166,9 +166,6 @@ const Pricing = () => {
                       <Icon className={`w-6 h-6 ${plan.highlighted ? 'text-[#1a1a1a]' : 'text-[#c9a962]'}`} />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 mb-2">
-                      <span className="text-[#c9a962] text-sm font-medium">{plan.stockRange}</span>
-                    </div>
                     <p className="text-white/50 text-sm">{plan.description}</p>
                   </div>
 
@@ -179,7 +176,7 @@ const Pricing = () => {
                         {plan.price}
                       </span>
                     </div>
-                    <p className="text-white/40 text-xs mt-1">{t('pricing.oneTimeFee')}</p>
+                    <p className="text-white/40 text-xs mt-1">{plan.billing}</p>
                   </div>
 
                   {/* Features */}
@@ -196,13 +193,16 @@ const Pricing = () => {
                     ))}
                   </ul>
 
-                  {/* Walkthrough Badge - Only for Professional and Enterprise */}
-                  {plan.hasWalkthrough && (
+                  {/* Consultation Badge - Only for Premium */}
+                  {plan.consultation && (
                     <div className="mb-6 p-3 rounded-lg bg-[#c9a962]/10 border border-[#c9a962]/30">
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 mb-1">
                         <Video className="w-4 h-4 text-[#c9a962]" />
-                        <span className="text-[#c9a962] text-sm font-medium">{t('pricing.included')}</span>
+                        <span className="text-[#c9a962] text-sm font-medium">{t('plan.premium.consultTitle')}</span>
                       </div>
+                      <p className="text-white/60 text-xs leading-relaxed">
+                        {t('plan.premium.consultDesc')}
+                      </p>
                     </div>
                   )}
 
