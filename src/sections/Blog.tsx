@@ -83,7 +83,7 @@ Remember: VaR is a tool, not a guarantee. Markets can always surprise us, but me
 
 ---
 
-*Want a professional VaR analysis of your portfolio? Contact us for a free consultation.*`,
+*Want a professional VaR analysis of your portfolio? Contact us for a consultation.*`,
       date: '2026-03-08',
       readTime: '8 min read',
       tags: ['VaR', 'Risk Management', 'Education'],
@@ -164,7 +164,7 @@ Remember: The goal isn't to eliminate risk — that's impossible. The goal is to
 
 ---
 
-*Is your portfolio properly diversified? Get a free risk analysis to find out.*`,
+*Is your portfolio properly diversified? Get a risk analysis to find out.*`,
       date: '2026-03-05',
       readTime: '6 min read',
       tags: ['Diversification', 'Risk Analysis'],
@@ -268,7 +268,7 @@ Remember: Markets reward patient capital. The investors who succeed aren't those
 
 ---
 
-*Concerned about your portfolio's volatility? Get a free VaR analysis to understand your risk exposure.*`,
+*Concerned about your portfolio's volatility? Get a VaR analysis to understand your risk exposure.*`,
       date: '2026-03-01',
       readTime: '5 min read',
       tags: ['Market Analysis', 'Volatility', 'Strategy'],
@@ -505,7 +505,7 @@ Markets will always have surprises. In the end, the investors who survive and co
 
 ---
 
-*想要對您的投資組合進行專業的 VaR 分析？聯繫我們獲取免費諮詢。*`,
+*想要對您的投資組合進行專業的 VaR 分析？聯繫我們獲取諮詢。*`,
       date: '2026-03-08',
       readTime: '8 分鐘閱讀',
       tags: ['VaR', '風險管理', '教育'],
@@ -586,7 +586,7 @@ Markets will always have surprises. In the end, the investors who survive and co
 
 ---
 
-*您的投資組合是否適當多元化？獲取免費風險分析以找出答案。*`,
+*您的投資組合是否適當多元化？獲取風險分析以找出答案。*`,
       date: '2026-03-05',
       readTime: '6 分鐘閱讀',
       tags: ['多元化', '風險分析'],
@@ -690,7 +690,7 @@ CBOE 波動率指數（VIX）衡量預期的市場波動率。通常被稱為「
 
 ---
 
-*擔心您的投資組合波動？獲取免費 VaR 分析以了解您的風險敞口。*`,
+*擔心您的投資組合波動？獲取 VaR 分析以了解您的風險敞口。*`,
       date: '2026-03-01',
       readTime: '5 分鐘閱讀',
       tags: ['市場分析', '波動率', '策略'],
@@ -927,7 +927,7 @@ ORB = 開盤區間突破（紐約開盤區間）。
 
 ---
 
-*想要对您的投资组合进行专业的 VaR 分析？联系我们获取免费咨询。*`,
+*想要对您的投资组合进行专业的 VaR 分析？联系我们获取咨询。*`,
       date: '2026-03-08',
       readTime: '8 分钟阅读',
       tags: ['VaR', '风险管理', '教育'],
@@ -1008,7 +1008,7 @@ ORB = 開盤區間突破（紐約開盤區間）。
 
 ---
 
-*您的投资组合是否适当多元化？获取免费风险分析以找出答案。*`,
+*您的投资组合是否适当多元化？获取风险分析以找出答案。*`,
       date: '2026-03-05',
       readTime: '6 分钟阅读',
       tags: ['多元化', '风险分析'],
@@ -1112,7 +1112,7 @@ CBOE 波动率指数（VIX）衡量预期的市场波动率。通常被称为「
 
 ---
 
-*担心您的投资组合波动？获取免费 VaR 分析以了解您的风险敞口。*`,
+*担心您的投资组合波动？获取 VaR 分析以了解您的风险敞口。*`,
       date: '2026-03-01',
       readTime: '5 分钟阅读',
       tags: ['市场分析', '波动率', '策略'],

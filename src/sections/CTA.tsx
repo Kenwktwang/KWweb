@@ -36,7 +36,7 @@ const CTA = () => {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://formspree.io/f/xgorqpqw', {
+      const response = await fetch('https://formspree.io/f/mdayqbdw', {
         method: 'POST',
         body: formData,
         headers: {

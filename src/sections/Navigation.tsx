@@ -82,11 +82,6 @@ const Navigation = () => {
               </button>
             ))}
             
-            {/* Language Switcher */}
-            <div className={`px-3 py-1 rounded-lg ${isScrolled ? 'bg-[#f5f5f5]' : 'bg-white/10'}`}>
-              <LanguageSwitcher />
-            </div>
-            
             <a
               href="https://var-calculator-production.up.railway.app"
               target="_blank"
@@ -104,6 +99,11 @@ const Navigation = () => {
             >
               {t('nav.getFreeAnalysis')}
             </button>
+            
+            {/* Language Switcher */}
+            <div className={`px-3 py-1 rounded-lg ${isScrolled ? 'bg-[#f5f5f5]' : 'bg-white/10'}`}>
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -143,16 +143,11 @@ const Navigation = () => {
               </button>
             ))}
             
-            {/* Mobile Language Switcher */}
-            <div className={`py-2 px-3 rounded-lg ${isScrolled ? 'bg-[#f5f5f5]' : 'bg-white/10'}`}>
-              <LanguageSwitcher />
-            </div>
-            
             <a
               href="https://var-calculator-production.up.railway.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary w-full text-center mt-4 flex items-center justify-center gap-1.5"
+              className="btn-primary w-full text-center flex items-center justify-center gap-1.5"
             >
               {t('nav.varCalculator')}
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -161,10 +156,15 @@ const Navigation = () => {
             </a>
             <button
               onClick={() => scrollToSection('#cta')}
-              className="btn-secondary w-full text-center mt-4"
+              className="btn-secondary w-full text-center"
             >
               {t('nav.getFreeAnalysis')}
             </button>
+            
+            {/* Mobile Language Switcher */}
+            <div className={`py-2 px-3 rounded-lg ${isScrolled ? 'bg-[#f5f5f5]' : 'bg-white/10'}`}>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>

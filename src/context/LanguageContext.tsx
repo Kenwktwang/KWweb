@@ -15,7 +15,7 @@ const translations = {
     'nav.howItWorks': 'How It Works',
     'nav.sampleReport': 'Sample Report',
     'nav.pricing': 'Pricing',
-    'nav.getFreeAnalysis': 'Get Free Analysis',
+    'nav.getFreeAnalysis': 'Book Consultation',
     'nav.varCalculator': 'VaR Calculator',
     
     // Hero
@@ -23,7 +23,7 @@ const translations = {
     'hero.headline1': 'Know Your Risk',
     'hero.headline2': 'Before It Knows You',
     'hero.subheadline': 'Professional VaR analysis for retail investors. Stop guessing, start measuring your portfolio risk with institutional-grade tools.',
-    'hero.ctaPrimary': 'Get Your Free Risk Analysis',
+    'hero.ctaPrimary': 'Book a Consultation',
     'hero.ctaSecondary': 'See How It Works',
     'hero.confidence': 'Confidence',
     'hero.users': 'Users',
@@ -96,7 +96,7 @@ const translations = {
     'services.subtitle': 'Everything you need to understand, measure, and manage your portfolio risk',
     'services.readyToStart': 'Ready to get started with professional risk analysis?',
     'services.viewPricing': 'View Pricing Plans',
-    'services.tryCalculator': 'Try Our Free VaR Calculator',
+    'services.tryCalculator': 'Try Our VaR Calculator',
     
     // Service Items
     'service.1.title': 'Daily VaR Calculation',
@@ -160,7 +160,7 @@ const translations = {
     // CTA
     'cta.ready': 'Ready to Know Your',
     'cta.realRisk': 'Real Risk?',
-    'cta.subtitle': 'Contact us for your free portfolio risk analysis. Includes an initial consultation.',
+    'cta.subtitle': 'Contact us for your portfolio risk analysis. Includes an initial consultation.',
     'cta.contactMethods': 'Contact Methods',
     'cta.contactMethodsSubtitle': 'Choose the most convenient way to reach us.',
     'cta.emailTitle': 'Email',
@@ -172,7 +172,7 @@ const translations = {
     'cta.regionsValue': '🇭🇰 Hong Kong ｜ 🇲🇴 Macau ｜ 🇨🇳 Greater Bay Area',
     'cta.businessHoursTitle': 'Business Hours',
     'cta.businessHoursDetail': 'Mon - Sat: 10:00 AM - 8:00 PM\nSun & Public Holidays: Closed',
-    'cta.businessHoursNote': 'Feel free to leave a message anytime, we reply during business hours',
+    'cta.businessHoursNote': 'Feel welcome to leave a message anytime, we reply during business hours',
     'cta.sendInquiry': 'Send an Inquiry',
     'cta.name': 'Name',
     'cta.namePlaceholder': 'Your name',
@@ -194,11 +194,11 @@ const translations = {
     'cta.sendAnother': 'Send Another',
     'cta.confidential': 'Your information will be kept confidential',
     'cta.submitError': 'Something went wrong. Please try again.',
-    'cta.getFreeAnalysis': 'Get Free Analysis',
+    'cta.getFreeAnalysis': 'Book Consultation',
     
     // Success Dialog
     'success.title': 'You\'re on the List!',
-    'success.desc': 'Thank you for your interest. We\'ve received your email and will contact you at info@openminai.com within 24 hours to schedule your free portfolio analysis and initial consultation.',
+    'success.desc': 'Thank you for your interest. We\'ve received your email and will contact you at info@openminai.com within 24 hours to schedule your portfolio analysis and initial consultation.',
     'success.gotIt': 'Got it!',
     
     // Footer
@@ -229,7 +229,7 @@ const translations = {
     'nav.howItWorks': '運作方式',
     'nav.sampleReport': '樣本報告',
     'nav.pricing': '價格',
-    'nav.getFreeAnalysis': '免費分析',
+    'nav.getFreeAnalysis': '預約諮詢',
     'nav.varCalculator': 'VaR 計算器',
 
     // Hero
@@ -237,7 +237,7 @@ const translations = {
     'hero.headline1': '了解您的風險',
     'hero.headline2': '在它了解您之前',
     'hero.subheadline': '為散戶投資者提供專業的 VaR 分析。停止猜測，開始使用機構級工具衡量您的投資組合風險。',
-    'hero.ctaPrimary': '獲取免費風險分析',
+    'hero.ctaPrimary': '預約專業諮詢',
     'hero.ctaSecondary': '了解運作方式',
     'hero.confidence': '置信度',
     'hero.users': '用戶',
@@ -310,7 +310,7 @@ const translations = {
     'services.subtitle': '您理解、衡量和管理投資組合風險所需的一切',
     'services.readyToStart': '準備好開始使用專業風險分析了嗎？',
     'services.viewPricing': '查看價格方案',
-    'services.tryCalculator': '試用我們的免費 VaR 計算器',
+    'services.tryCalculator': '試用我們的 VaR 計算器',
 
     // Service Items
     'service.1.title': '每日 VaR 計算',
@@ -374,7 +374,7 @@ const translations = {
     // CTA
     'cta.ready': '準備好了解您的',
     'cta.realRisk': '真實風險了嗎？',
-    'cta.subtitle': '聯繫我們，獲取免費的投資組合風險分析。包括初步諮詢。',
+    'cta.subtitle': '聯繫我們，獲取投資組合風險分析。包括初步諮詢。',
     'cta.contactMethods': '聯繫方式',
     'cta.contactMethodsSubtitle': '選擇最方便的方式與我們聯繫。',
     'cta.emailTitle': '電郵',
@@ -408,11 +408,11 @@ const translations = {
     'cta.sendAnother': '發送另一個',
     'cta.confidential': '您的資料將會保密',
     'cta.submitError': '發生錯誤，請稍後再試。',
-    'cta.getFreeAnalysis': '獲取免費分析',
+    'cta.getFreeAnalysis': '預約諮詢',
     
     // Success Dialog
     'success.title': '您已加入名單！',
-    'success.desc': '感謝您的關注。我們已收到您的電郵，將在 24 小時內通過 info@openminai.com 與您聯繫，安排免費投資組合分析和初步諮詢。',
+    'success.desc': '感謝您的關注。我們已收到您的電郵，將在 24 小時內通過 info@openminai.com 與您聯繫，安排投資組合分析和初步諮詢。',
     'success.gotIt': '知道了！',
     
     // Footer
@@ -443,7 +443,7 @@ const translations = {
     'nav.howItWorks': '运作方式',
     'nav.sampleReport': '样本报告',
     'nav.pricing': '价格',
-    'nav.getFreeAnalysis': '免费分析',
+    'nav.getFreeAnalysis': '预约咨询',
     'nav.varCalculator': 'VaR 计算器',
 
     // Hero
@@ -451,7 +451,7 @@ const translations = {
     'hero.headline1': '了解您的风险',
     'hero.headline2': '在它了解您之前',
     'hero.subheadline': '为散户投资者提供专业的 VaR 分析。停止猜测，开始使用机构级工具衡量您的投资组合风险。',
-    'hero.ctaPrimary': '获取免费风险分析',
+    'hero.ctaPrimary': '预约专业咨询',
     'hero.ctaSecondary': '了解运作方式',
     'hero.confidence': '置信度',
     'hero.users': '用户',
@@ -524,7 +524,7 @@ const translations = {
     'services.subtitle': '您理解、衡量和管理投资组合风险所需的一切',
     'services.readyToStart': '准备好开始使用专业风险分析了吗？',
     'services.viewPricing': '查看价格方案',
-    'services.tryCalculator': '试用我们的免费 VaR 计算器',
+    'services.tryCalculator': '试用我们的 VaR 计算器',
 
     // Service Items
     'service.1.title': '每日 VaR 计算',
@@ -588,7 +588,7 @@ const translations = {
     // CTA
     'cta.ready': '准备好了解您的',
     'cta.realRisk': '真实风险了吗？',
-    'cta.subtitle': '联系我们，获取免费的投资组合风险分析。包括初步咨询。',
+    'cta.subtitle': '联系我们，获取投资组合风险分析。包括初步咨询。',
     'cta.contactMethods': '联系方式',
     'cta.contactMethodsSubtitle': '选择最方便的方式与我们联系。',
     'cta.emailTitle': '电邮',
@@ -622,11 +622,11 @@ const translations = {
     'cta.sendAnother': '发送另一个',
     'cta.confidential': '您的资料将会保密',
     'cta.submitError': '发生错误，请稍后再试。',
-    'cta.getFreeAnalysis': '获取免费分析',
+    'cta.getFreeAnalysis': '预约咨询',
     
     // Success Dialog
     'success.title': '您已加入名单！',
-    'success.desc': '感谢您的关注。我们已收到您的电邮，将在 24 小时内通过 info@openminai.com 与您联系，安排免费投资组合分析和初步咨询。',
+    'success.desc': '感谢您的关注。我们已收到您的电邮，将在 24 小时内通过 info@openminai.com 与您联系，安排投资组合分析和初步咨询。',
     'success.gotIt': '知道了！',
     
     // Footer
